@@ -37,6 +37,23 @@ void setup()
 
 void loop() 
 {
-  // put your main code here, to run repeatedly:
+  // Read input from all sensors
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    digitalRead(IRSensorPins[i], IRSensorStates[i]);
+  }
 
+  // Check whether or not all sensors have been activated
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    // If any sensor has not been activated, a swipe was not detected, so exit the loop
+    if (IRSensorStates[i] == LOW)
+    {
+      swipeDetected = false;
+      break;
+    }
+
+    // Otherwise, all sensors were activated, so a swipe was detected
+    swipeDetected = true;
+  }
 }
