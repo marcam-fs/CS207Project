@@ -56,4 +56,22 @@ void loop()
     // Otherwise, all sensors were activated, so a swipe was detected
     swipeDetected = true;
   }
+
+  // If a swipe was detected, turn on the LED to red
+  if (swipeDetected)
+  {
+      analogWrite(ledPinRed, 255);
+      analogWrite(ledPinGreen, 0);
+      analogWrite(ledPinBlue, 0);
+  }
+  // Otherwise, turn off the LED
+  else
+  {
+      analogWrite(ledPinRed, 0);
+      analogWrite(ledPinGreen, 0);
+      analogWrite(ledPinBlue, 0);
+  }
+
+  // Allow light to stay on for 10 ms before checking for new swipes
+  delay(10);
 }
