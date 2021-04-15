@@ -95,6 +95,14 @@ void isSwipeDetected(int & mySwipe)
   }
 }
 
+// This function turns on the RGB LED to a colour specified by the 'red', 'green', and 'blue' parameters
+void turnOnLights(int red, int green, int blue)
+{
+  analogWrite(ledPinRed, red);
+  analogWrite(ledPinGreen, green);
+  analogWrite(ledPinBlue, blue);
+}
+
 // This function turns off the RGB LED
 void turnOffLights()
 {
