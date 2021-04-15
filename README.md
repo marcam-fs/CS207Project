@@ -40,6 +40,7 @@ For a more detailed visual and audial description of the project, please view th
 In order to reproduce this project, you will need the following hardware components:
 - 1 Arduino Uno (complete with a USB cable)
 - Jumper Wires (at least 21)
+- 3 560 Ohms resistors (you may also use 3 2.2k Ohms resistors, if you choose)
 - 5 IR Sensors (you may use more or less, or even an IR Sensor, array if you choose)
 - 1 RGB LED
 - 1 Piezo Speaker
