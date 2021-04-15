@@ -48,9 +48,38 @@ void loop()
   // If a swipe was detected, turn on the LED to red
   if (swipeDetected == 1)
   {
-      analogWrite(ledPinRed, 255);
-      analogWrite(ledPinGreen, 0);
-      analogWrite(ledPinBlue, 0);
+    // Red
+    turnOnLights(255, 0, 0);
+  }
+  else if (swipeDetected == 2)
+  {
+    // Orange
+    turnOnLights(255, 128, 0);
+  }
+  else if (swipeDetected == 3)
+  {
+    // Yellow
+    turnOnLights(255, 255, 0);
+  }
+  else if (swipeDetected == 4)
+  {
+    // Green
+    turnOnLights(0, 255, 0);
+  }
+  else if (swipeDetected == 5)
+  {
+    // Blue
+    turnOnLights(0, 0, 205);
+  }
+  else if (swipeDetected == 6)
+  {
+    // Purple
+    turnOnLights(128, 0, 255);
+  }
+  else if (swipeDetected == 7)
+  {
+    // Pink
+    turnOnLights(128, 0, 128);
   }
   // Otherwise, turn off the LED
   else
@@ -58,7 +87,7 @@ void loop()
       turnOffLights();
   }
 
-  // Allow light to stay on for 10 ms before checking for new swipes
+  // Wait before checking for new swipes
   delay(10);
 }
 
@@ -91,7 +120,7 @@ void isSwipeDetected(int & mySwipe)
   if (swipeDetected)
   {
     // Otherwise, all sensors were activated, so a swipe was detected
-    mySwipe = (mySwipe + 1) % 2;
+    mySwipe = (mySwipe + 1) % 8;
   }
 }
 
