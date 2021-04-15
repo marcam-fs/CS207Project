@@ -85,6 +85,7 @@ For future improvement of this project, it would be beneficial to include and de
 
 ## License
 The project is solely my own work, except where otherwise indicated.
+
 MIT License
 
 Copyright (c) 2020 Maria Azam
