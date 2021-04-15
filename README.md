@@ -14,6 +14,8 @@
 This repository contains the following items:
 - [READme.md](docs/README.md): The file you are currently reading, containing a detailed description of this project.
 - [mariaAzam_CS207Project.ino](docs/mariaAzam_CS207Project): The Arduino source code for this project.
+- [manageLibraries.png](docs/manageLibraries.png): An image describing how to navigate to the `Manage Libraries` option in Arduino.
+- [musicBuzzer.png](docs/musicBuzzer.png): An image describing how to install the `MusicBuzzer` library in Arduino.
 
 ## Features
 This project is loosely based on the Gesture-Controlled Interactive Table Light project by 'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
@@ -49,9 +51,9 @@ To build the software for this project, please complete the following steps:
 - When you open Arduino, a new project will be created for you. Save it in your desired location on your device.
 - You will see that a code template has been created for you. Delete this and add the required code for this project. Either copy/paste or download the following source code [mariaAzam_CS207Project.ino](docs/mariaAzam_CS207Project.ino) into your `.ino` file.
 - In order for the `music` functions to work, you will need to install the 'MusicBuzzer' library by [robsoncouto](https://github.com/robsoncouto/arduino-songs). To do so, please complete the following steps:
-  - In the top toolbar of Arduino, select: `Sketch > Include Library > Manage Libraries`.
+  - In the top toolbar of Arduino, select: `Sketch > Include Library > Manage Libraries`. For a visual, see the image [here](docs/manageLibraries.png).
   - In the `Library Manager` dialog box, search for 'Music Buzzer'.
-  - Select the `MusicBuzzer` library by Everton Ramires, and click `Install`.
+  - Select the `MusicBuzzer` library by Everton Ramires, and click `Install`. For a visual, see the image [here](docs/musicBuzzer.png).
   - Save this library in your `Documents > Arduino > libraries` folder on your device.
   - Once the `MusicBuzzer` library has been installed, you need to add it to your project.
   - In the top toolbar of Arduino, select: `Sketch > Include Library > Add .ZIP Library...`.
