@@ -39,28 +39,14 @@ void setup()
 
 void loop() 
 {
-  // Read input from all sensors
-  for (int i = 0; i < NUM_SENSORS; i++)
-  {
-    digitalRead(IRSensorPins[i], IRSensorStates[i]);
-  }
+  // Get digital input from all 5 IR Sensors
+  readSensorStates();
 
-  // Check whether or not all sensors have been activated
-  for (int i = 0; i < NUM_SENSORS; i++)
-  {
-    // If any sensor has not been activated, a swipe was not detected, so exit the loop
-    if (IRSensorStates[i] == LOW)
-    {
-      swipeDetected = false;
-      break;
-    }
-
-    // Otherwise, all sensors were activated, so a swipe was detected
-    swipeDetected = true;
-  }
+  // Determine whether a swipe was detected & store the corresponding swipe number in 'swipeDetected'
+  isSwipeDetected(swipeDetected);
 
   // If a swipe was detected, turn on the LED to red
-  if (swipeDetected)
+  if (swipeDetected == 1)
   {
       analogWrite(ledPinRed, 255);
       analogWrite(ledPinGreen, 0);
@@ -69,11 +55,50 @@ void loop()
   // Otherwise, turn off the LED
   else
   {
-      analogWrite(ledPinRed, 0);
-      analogWrite(ledPinGreen, 0);
-      analogWrite(ledPinBlue, 0);
+      turnOffLights();
   }
 
   // Allow light to stay on for 10 ms before checking for new swipes
   delay(10);
+}
+
+// This function reads digital input from each of the IR Sensors
+void readSensorStates()
+{
+  // Read input from all sensors
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    IRSensorState[i] = digitalRead(IRSensorPins[i]);
+  }
+}
+
+// This function checks the state of all 5 IR Sensors to determine whether or not a swipe was detected
+void isSwipeDetected(int & mySwipe)
+{ 
+  bool swipeDetected = true;
+  
+  // Check whether or not all sensors have been activated
+  for (int i = 0; i < NUM_SENSORS; i++)
+  {
+    // If any sensor has not been activated, a swipe was not detected
+    if (IRSensorState[i] == HIGH)
+    {
+      swipeDetected = false;
+    }
+  }
+
+  // If a swipe was decected, update the number of swipes stored in 'mySwipe'
+  if (swipeDetected)
+  {
+    // Otherwise, all sensors were activated, so a swipe was detected
+    mySwipe = (mySwipe + 1) % 2;
+  }
+}
+
+// This function turns off the RGB LED
+void turnOffLights()
+{
+    analogWrite(ledPinRed, 0);
+    analogWrite(ledPinGreen, 0);
+    analogWrite(ledPinBlue, 0);
 }
