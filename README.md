@@ -16,7 +16,7 @@ This repository contains the following items:
 - [mariaAzam_CS207Project.ino](docs/mariaAzam_CS207Project): The Arduino source code for this project.
 
 ## Features
-This project is loosely based on the Gesture-Controlled Interactive Table Light project by'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
+This project is loosely based on the Gesture-Controlled Interactive Table Light project by 'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
 
 This project creates an interactive gesture-controlled table light. The table light features two main components: light and sound, and is composed of five IR Sensors, one RGB LED, and one piezo speaker. The table light is controlled by 'swiping' movements, the movement of a hand from right to left, detected by the IR Sensors. There is a series of 8 possible swipes of the hand, each swipe number corresponding to a different behaviour of the table light. Initially, the table light will be off. Once the first hand swipe is detected, the table light will turn on, indicated by a red LED and the 'Super Mario Bros' song playing from the piezo speaker. The second hand swipe will result in an orange LED and the 'The Lion Sleeps Tonight Song.' The colour of the LED and song will continue to change 5 more times, for a total of 7 different colours and songs. The eighth and final swipe will turn the table light off, indicated by no light in the RGB LED and no song playing rom the piezo speaker.
 
@@ -84,5 +84,31 @@ For future improvement of this project, it would be beneficial to include and de
   - For further improvement of this project, it is necessary to understand where this error is coming from and how to overcome this issue.
 
 ## License
-All code has been written by me, except where otherwise indicated. 
+The project is solely my own work, except where otherwise indicated.
+MIT License
+
+Copyright (c) 2020 Maria Azam
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
 ## Credits
+- Base idea of project: [Random Stuff We Make](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code)
+- `MusicBuzzer` library: Written by Everton Ramires
+- `MusicBuzzer` songs: Added by [robsoncouto](https://github.com/robsoncouto/arduino-songs)
+- IR Sensors: Purchased from nineone on [Amazon](https://www.amazon.ca/Infrared-Obstacle-Avoidance-Detecting-Adjutable/dp/B07D3PHQT8)
