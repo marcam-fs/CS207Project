@@ -16,6 +16,8 @@ This repository contains the following items:
 - [mariaAzam_CS207Project.ino](docs/mariaAzam_CS207Project): The Arduino source code for this project.
 
 ## Features
+This project is loosely based on the Gesture-Controlled Interactive Table Light project by'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
+
 This project creates an interactive gesture-controlled table light. The table light features two main components: light and sound, and is composed of five IR Sensors, one RGB LED, and one piezo speaker. The table light is controlled by 'swiping' movements, the movement of a hand from right to left, detected by the IR Sensors. There is a series of 8 possible swipes of the hand, each swipe number corresponding to a different behaviour of the table light. Initially, the table light will be off. Once the first hand swipe is detected, the table light will turn on, indicated by a red LED and the 'Super Mario Bros' song playing from the piezo speaker. The second hand swipe will result in an orange LED and the 'The Lion Sleeps Tonight Song.' The colour of the LED and song will continue to change 5 more times, for a total of 7 different colours and songs. The eighth and final swipe will turn the table light off, indicated by no light in the RGB LED and no song playing rom the piezo speaker.
 
 The following colours and songs are included in each swipe of the table light:
@@ -56,13 +58,31 @@ To build the software for this project, please complete the following steps:
   - Navigate to your `Documents > Arduino > libraries` folder, select `MusicBuzzer`, and press `Choose`.
   - Arduino will automatically add a `#include <MusicBuzzer.h>` statement at the top of your code. This is necessary, so do not alter or erase it.
   - Now the `MusicBuzzer` library has been included in your project, and you are ready to use its functions.
+- Now you are ready to compile and upload the project by completing the following steps:
+  - Make sure to save the your project.
+  - Click the checkmark icon in the top-left corner of your Arduino sketch to compile your code.
+  - Ensure that your circuit is completed and that your Arduino Uno board is connected to your device via the USB cable.
+  - Once your code is compiled and your board is connected, click the right arrow icon in the top-left corner of your Arduino sketch to upload your code to your Arduino.
+
+Follow the steps outlined in the Usage section below to learn how to use the table light. Feel free to make any changes to the circuit or code. Good luck and have fun with it!
 
 ## Usage
 
 ## Planned Features
+For future improvement of this project, it would be beneficial to include and detect two different hand movements that would control the light and sound separately. One movement can be used to control the colour of the light, while the other can be used to control the sound. This will make the table light more dynamic, allowing isolated control of the light and sound. This way, the person using the table light can change it to their liking, choosing a combination of songs and colours that they prefer, instead of the hard-coded combinations, and even simply play a song or turn on the light on its own.
 
 ## Bugs
+1. Not enough memory error
+  - The code sometimes fails to compile due to a 'not enough memory' error.
+  - This is a result of using the `music` functions.
+  - To avoid this error, comment out the `music.song()` statements in the `taskOnSwipe` function.
+  - For further improvement of this project, it is necessary to understand why the `music` functions take up so much space in memory and how to overcome this issue.
+2. Swipe while song is playing error
+  - When the code has been uploaded to the Arduino Uno, the first swipe results in the correct colour of red and song of 'Super Mario Bros'.
+  - However, the code does not detect a swipe while the song is playing.
+  - This means that the person using the table light must wait unitl the song is over for their next swipe. Often, the next swipe goes undetected or the table light turns off altogether.
+  - For further improvement of this project, it is necessary to understand where this error is coming from and how to overcome this issue.
 
 ## License
-
+All code has been written by me, except where otherwise indicated. 
 ## Credits
