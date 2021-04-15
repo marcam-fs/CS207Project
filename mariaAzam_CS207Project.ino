@@ -100,28 +100,35 @@ void taskOnSwipe(int mySwipe)
 {
   switch (mySwipe)
   {
-    case 1: // Red
+    case 1: // Red & 'Super Mario Bros'
       turnOnLights(255, 0, 0);
+      music.supermariobros();
       break;
-    case 2: // Orange
+    case 2: // Orange & 'The Lion Sleeps Tonight'
       turnOnLights(255, 128, 0);
+      music.thelionsleepstonight();
       break;
-    case 3: // Yellow
+    case 3: // Yellow & 'Asabranca'
       turnOnLights(255, 255, 0);
+      music.asabranca();
       break;
-    case 4: // Green
+    case 4: // Green & 'Harry Potter'
       turnOnLights(0, 128, 0);
+      music.harrypotter();
       break;
-    case 5: // Blue
+    case 5: // Blue & 'Game of Thrones'
       turnOnLights(0, 0, 205);
+      music.gameofthrones();
       break;
-    case 6: // Purple
+    case 6: // Purple & 'Song of Storms'
       turnOnLights(128, 0, 255);
+      music.songofstorms();
       break;
-    case 7: // Pink
+    case 7: // Pink & 'Pink Panther'
       turnOnLights(128, 0, 128);
+      music.pinkpanther();
       break;
-    default: // Otherwise, turn off the LED
+    default: // Light off & no music
       turnOffLights();
       break;
   }
