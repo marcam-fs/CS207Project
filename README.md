@@ -12,7 +12,7 @@
 
 ## Manifest
 This repository contains the following items:
-- [READme.md](docs/README.md): The file you are currently reading, containing a detailed description of this project.
+- [READme.md](https://github.com/marcam-fs/CS207Project/blob/main/README.md): The file you are currently reading, containing a detailed description of this project.
 - [mariaAzam_CS207Project.ino](docs/mariaAzam_CS207Project): The Arduino source code for this project.
 - [manageLibraries.png](docs/manageLibraries.png): An image describing how to navigate to the `Manage Libraries` option in Arduino.
 - [musicBuzzer.png](docs/musicBuzzer.png): An image describing how to install the `MusicBuzzer` library in Arduino.
