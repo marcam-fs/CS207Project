@@ -2,12 +2,19 @@
   Interactive Gesture-Controlled Table Lamp
 
   This sketch will configure an LED to turn on and change colours
-  when 5 IR sensors are activated from one end to the other.
+  when 5 IR sensors are activated from one end to the other, or
+  'swiped'. It will also play a new song for each swipe. At the
+  eighth swipe, the light and song will turn off, signalling
+  that the table lamp is 'off.' The next swipe will indicate that
+  the table lamp is 'on,' and we will start from the beginning,
+  a red LED and the 'Super Mario Bros' song.
 
   by Maria Azam
   29 Mar 2021
   Adapted from 'Random Stuff We Make's' code found at: 
     https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code
+  MusicBuzzer library installed and functions used from 'robsoncouto' on GitHub:
+    https://github.com/robsoncouto/arduino-songs
 */
 
 #include <MusicBuzzer.h>
