@@ -10,6 +10,8 @@
     https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code
 */
 
+#include <MusicBuzzer.h>
+
 // Arrays to store the properties of each of the 5 IR sensors
 const int NUM_SENSORS = 5;
 int IRSensorState[NUM_SENSORS] = {0, 0, 0, 0, 0};          // The state (HIGH || LOW) of each IR sensor
@@ -20,6 +22,8 @@ int ledState = 0;                                // The state (HIGH || LOW) of t
 const int ledPinRed = 9;                         // The data pin for the red pin of the LED
 const int ledPinGreen = 10;                      // The data pin for the green pin of the LED
 const int ledPinBlue = 11;                       // The data pin for the blue pin of the LED
+
+const int piezoPin = 12;                         // The data pin for the piezo speaker
 
 int swipeDetected = 0;        // Stores the number of swipes on the IR Sensors
 
@@ -35,6 +39,9 @@ void setup()
   pinMode(ledPinRed, OUTPUT);
   pinMode(ledPinGreen, OUTPUT);
   pinMode(ledPinBlue, OUTPUT);
+
+  // Setup piezo speaker pin with the 'MusicBuzzer' library
+  music.init(piezoPin);
 }
 
 void loop() 
@@ -48,6 +55,9 @@ void loop()
   // Execute the specific task corresponding to the current swipe number
   taskOnSwipe(swipeDetected);
 
+  // Play a song
+  music.thelionsleepstonight();
+  
   // Wait before checking for new swipes
   delay(10);
 }
