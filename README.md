@@ -17,6 +17,8 @@ This repository contains the following items:
 - [manageLibraries.png](manageLibraries.png): An image describing how to navigate to the `Manage Libraries` option in Arduino.
 - [musicBuzzer.png](musicBuzzer.png): An image describing how to install the `MusicBuzzer` library in Arduino.
 - [schematicDiagram.png](schematicDiagram.png): An image of the schematic diagram for the project's hardware circuit.
+- [howToSwipe1.png](howToSwipe1.png): An image showing the beginning of the swiping motion.
+- [howToSwipe2.png](howToSwipe2.png): An image showing the end of the swiping motion.
 
 ## Features
 This project is loosely based on the Gesture-Controlled Interactive Table Light project by 'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
@@ -73,6 +75,11 @@ To build the software for this project, please complete the following steps:
 Follow the steps outlined in the Usage section below to learn how to use the table light. Feel free to make any changes to the circuit or code. Good luck and have fun with it!
 
 ## Usage
+Now that you have uploaded the code to your Arduino Uno, you are ready to use your Interactive Gesture-Controlled Table Light. It is very easy to use! All you need to do is swipe your hand infront of the IR sensors, starting from the IR Sensor connected to input pin 3 and ending with the IR Sensor connected to input pin 7. Here is a visual representation of how to do so:
+![](howToSwipe1.png)
+![](howToSwipe2.png)
+
+That's it! Keep swiping to discover new colours and songs.
 
 ## Planned Features
 For future improvement of this project, it would be beneficial to include and detect two different hand movements that would control the light and sound separately. One movement can be used to control the colour of the light, while the other can be used to control the sound. This will make the table light more dynamic, allowing isolated control of the light and sound. This way, the person using the table light can change it to their liking, choosing a combination of songs and colours that they prefer, instead of the hard-coded combinations, and even simply play a song or turn on the light on its own.
