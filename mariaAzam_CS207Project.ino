@@ -45,47 +45,8 @@ void loop()
   // Determine whether a swipe was detected & store the corresponding swipe number in 'swipeDetected'
   isSwipeDetected(swipeDetected);
 
-  // If a swipe was detected, turn on the LED to red
-  if (swipeDetected == 1)
-  {
-    // Red
-    turnOnLights(255, 0, 0);
-  }
-  else if (swipeDetected == 2)
-  {
-    // Orange
-    turnOnLights(255, 128, 0);
-  }
-  else if (swipeDetected == 3)
-  {
-    // Yellow
-    turnOnLights(255, 255, 0);
-  }
-  else if (swipeDetected == 4)
-  {
-    // Green
-    turnOnLights(0, 255, 0);
-  }
-  else if (swipeDetected == 5)
-  {
-    // Blue
-    turnOnLights(0, 0, 205);
-  }
-  else if (swipeDetected == 6)
-  {
-    // Purple
-    turnOnLights(128, 0, 255);
-  }
-  else if (swipeDetected == 7)
-  {
-    // Pink
-    turnOnLights(128, 0, 128);
-  }
-  // Otherwise, turn off the LED
-  else
-  {
-      turnOffLights();
-  }
+  // Execute the specific task corresponding to the current swipe number
+  taskOnSwipe(swipeDetected);
 
   // Wait before checking for new swipes
   delay(10);
@@ -121,6 +82,38 @@ void isSwipeDetected(int & mySwipe)
   {
     // Otherwise, all sensors were activated, so a swipe was detected
     mySwipe = (mySwipe + 1) % 8;
+  }
+}
+
+// This function turns on the specific light colour corresponding to the number of swipes stored in 'mySwipe'
+void taskOnSwipe(int mySwipe)
+{
+  switch (mySwipe)
+  {
+    case 1: // Red
+      turnOnLights(255, 0, 0);
+      break;
+    case 2: // Orange
+      turnOnLights(255, 128, 0);
+      break;
+    case 3: // Yellow
+      turnOnLights(255, 255, 0);
+      break;
+    case 4: // Green
+      turnOnLights(0, 128, 0);
+      break;
+    case 5: // Blue
+      turnOnLights(0, 0, 205);
+      break;
+    case 6: // Purple
+      turnOnLights(128, 0, 255);
+      break;
+    case 7: // Pink
+      turnOnLights(128, 0, 128);
+      break;
+    default: // Otherwise, turn off the LED
+      turnOffLights();
+      break;
   }
 }
 
