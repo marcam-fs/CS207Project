@@ -16,6 +16,7 @@ This repository contains the following items:
 - [mariaAzam_CS207Project.ino](mariaAzam_CS207Project.ino): The Arduino source code for this project.
 - [manageLibraries.png](manageLibraries.png): An image describing how to navigate to the `Manage Libraries` option in Arduino.
 - [musicBuzzer.png](musicBuzzer.png): An image describing how to install the `MusicBuzzer` library in Arduino.
+- [schematicDiagram.png](schematicDiagram.png): An image of the schematic diagram for the project's hardware circuit.
 
 ## Features
 This project is loosely based on the Gesture-Controlled Interactive Table Light project by 'Random Stuff We Make' found at [hackster.io](https://www.hackster.io/rswm/gesture-controlled-interactive-table-light-3f8bd7#code). It also utilizes the `MusicBuzzer` library, initially written by Everton Ramires, and whose songs were included by robsoncouto on [github.com/robsoncouto/arduino-songs](https://github.com/robsoncouto/arduino-songs).
@@ -44,7 +45,7 @@ In order to reproduce this project, you will need the following hardware compone
 - 1 Piezo Speaker
 
 To build the circuit, arrange the above-mentioned hardware components according to the following schematic diagram:
-INSERT DIAGRAM HERE
+![](schematicDiagram.png)
 
 To build the software for this project, please complete the following steps:
 - Download and open the Arduino software for your specific operating system. For specific download instructions and versions, please visit: [Arduino Software](https://www.arduino.cc/en/software).
