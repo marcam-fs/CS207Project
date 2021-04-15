@@ -21,6 +21,8 @@ const int ledPinRed = 9;                         // The data pin for the red pin
 const int ledPinGreen = 10;                      // The data pin for the green pin of the LED
 const int ledPinBlue = 11;                       // The data pin for the blue pin of the LED
 
+int swipeDetected = 0;        // Stores the number of swipes on the IR Sensors
+
 void setup() 
 {
   // Set all 5 IR sensor pins as inputs
