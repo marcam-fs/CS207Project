@@ -36,7 +36,7 @@ The following colours and songs are included in each swipe of the table light:
 8. No colour, no music
 
 For a more detailed visual and audial description of the project, please view the video here:
-[INSERT YOUTUBE VIDEO LINK](YOUTUBE VIDEO LINK)
+[CS 207 Project: Interactive Gesture-Controlled Table Light (Video)](https://youtu.be/oDe_O0-SmtQ)
 
 ## Reproduction
 In order to reproduce this project, you will need the following hardware components:
@@ -81,7 +81,7 @@ Now that you have uploaded the code to your Arduino Uno, you are ready to use yo
 
 That's it! Keep swiping to discover new colours and songs.
 
-## Planned Features
+## Planned Features/Future Improvement
 For future improvement of this project, it would be beneficial to include and detect two different hand movements that would control the light and sound separately. One movement can be used to control the colour of the light, while the other can be used to control the sound. This will make the table light more dynamic, allowing isolated control of the light and sound. This way, the person using the table light can change it to their liking, choosing a combination of songs and colours that they prefer, instead of the hard-coded combinations, and even simply play a song or turn on the light on its own.
 
 ## Bugs
